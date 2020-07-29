@@ -1,0 +1,59 @@
+{
+  "__class__": "Table",
+  "__module__": "lib.controllers.table.Table",
+  "entries": [
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "R"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 1
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 1
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Write",
+        "__module__": "lib.controls.Write",
+        "word": {
+          "__class__": "Word",
+          "__module__": "lib.data.Word",
+          "name": "1"
+        }
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 1
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 2,
+        "terminal": true
+      }
+    }
+  ]
+}
