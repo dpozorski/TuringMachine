@@ -1,0 +1,1489 @@
+{
+  "__class__": "Table",
+  "__module__": "lib.controllers.table.Table",
+  "entries": [
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Write",
+        "__module__": "lib.controls.Write",
+        "word": {
+          "__class__": "Word",
+          "__module__": "lib.data.Word",
+          "name": "0"
+        }
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 1
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 1
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "R"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 1
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 2
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "R"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 2
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 3
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Write",
+        "__module__": "lib.controls.Write",
+        "word": {
+          "__class__": "Word",
+          "__module__": "lib.data.Word",
+          "name": "0"
+        }
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 3
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 4
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "R"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 4
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 3
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Write",
+        "__module__": "lib.controls.Write",
+        "word": {
+          "__class__": "Word",
+          "__module__": "lib.data.Word",
+          "name": "0"
+        }
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 3
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 39,
+        "terminal": true
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Write",
+        "__module__": "lib.controls.Write",
+        "word": {
+          "__class__": "Word",
+          "__module__": "lib.data.Word",
+          "name": "1"
+        }
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 2
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 5
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "R"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 5
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 5
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "R"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 5
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 6
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "R"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 6
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 17
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "L"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 17
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 10
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Write",
+        "__module__": "lib.controls.Write",
+        "word": {
+          "__class__": "Word",
+          "__module__": "lib.data.Word",
+          "name": "0"
+        }
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 10
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 35
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "L"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 35
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 36
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "L"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 36
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 36
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Write",
+        "__module__": "lib.controls.Write",
+        "word": {
+          "__class__": "Word",
+          "__module__": "lib.data.Word",
+          "name": "1"
+        }
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 36
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 37
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Write",
+        "__module__": "lib.controls.Write",
+        "word": {
+          "__class__": "Word",
+          "__module__": "lib.data.Word",
+          "name": "0"
+        }
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 37
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 38
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "L"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 38
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 37
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "L"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 37
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 39,
+        "terminal": true
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Write",
+        "__module__": "lib.controls.Write",
+        "word": {
+          "__class__": "Word",
+          "__module__": "lib.data.Word",
+          "name": "1"
+        }
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 17
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 7
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "R"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 7
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 7
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "L"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 7
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 8
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Write",
+        "__module__": "lib.controls.Write",
+        "word": {
+          "__class__": "Word",
+          "__module__": "lib.data.Word",
+          "name": "0"
+        }
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 8
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 9
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "L"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 9
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 14
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "L"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 14
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 14
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "L"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 14
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 15
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "L"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 15
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 15
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "R"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 15
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 16
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Write",
+        "__module__": "lib.controls.Write",
+        "word": {
+          "__class__": "Word",
+          "__module__": "lib.data.Word",
+          "name": "1"
+        }
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 16
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 18
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Write",
+        "__module__": "lib.controls.Write",
+        "word": {
+          "__class__": "Word",
+          "__module__": "lib.data.Word",
+          "name": "0"
+        }
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 18
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 18
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "R"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 18
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 19
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "R"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 19
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 32
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Write",
+        "__module__": "lib.controls.Write",
+        "word": {
+          "__class__": "Word",
+          "__module__": "lib.data.Word",
+          "name": "1"
+        }
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 32
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 33
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "R"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 33
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 32
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "L"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 32
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 34
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "L"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 34
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 34
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "R"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 34
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 39,
+        "terminal": true
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "R"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 19
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 20
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "R"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 20
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 20
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "R"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 20
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 21
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "R"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 21
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 21
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Write",
+        "__module__": "lib.controls.Write",
+        "word": {
+          "__class__": "Word",
+          "__module__": "lib.data.Word",
+          "name": "0"
+        }
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 21
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 22
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "R"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 22
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 23
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Write",
+        "__module__": "lib.controls.Write",
+        "word": {
+          "__class__": "Word",
+          "__module__": "lib.data.Word",
+          "name": "1"
+        }
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 23
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 29
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "L"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 29
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 30
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "L"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 30
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 30
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "L"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 30
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 31
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "L"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 31
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 31
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "R"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 31
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 18
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "R"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 23
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 24
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "R"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 24
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 24
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "R"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 24
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 25
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "R"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 25
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 26
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "R"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 26
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 26
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Write",
+        "__module__": "lib.controls.Write",
+        "word": {
+          "__class__": "Word",
+          "__module__": "lib.data.Word",
+          "name": "1"
+        }
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 26
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 27
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Write",
+        "__module__": "lib.controls.Write",
+        "word": {
+          "__class__": "Word",
+          "__module__": "lib.data.Word",
+          "name": "1"
+        }
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 25
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 27
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "L"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 27
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 27
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "L"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 27
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 28
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "1"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "L"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 28
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 28
+      }
+    },
+    {
+      "__class__": "Edge",
+      "__module__": "lib.controllers.table.Edge",
+      "condition": {
+        "__class__": "Word",
+        "__module__": "lib.data.Word",
+        "name": "0"
+      },
+      "action": {
+        "__class__": "Move",
+        "__module__": "lib.controls.Move",
+        "direction": "R"
+      },
+      "source": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 28
+      },
+      "target": {
+        "__class__": "State",
+        "__module__": "lib.State",
+        "label": 21
+      }
+    }
+  ]
+}

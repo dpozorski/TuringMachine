@@ -1,4 +1,5 @@
 from lib.utilities.JSONDeserializer import JSONDeserializer
+from lib.TuringMachine import TuringMachine
 import json
 import os
 
@@ -49,3 +50,6 @@ with open(tape_head_path) as f:
 
 # Convert JSON object to configured Python Transformer object
 tape_head = deserializer.deserialize(obj_json=json_string)
+
+# construct the Turing Machine
+tm = TuringMachine(controller=controller, tape_head=tape_head)
