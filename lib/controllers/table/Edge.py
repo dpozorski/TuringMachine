@@ -53,6 +53,24 @@ class Edge(object):
 		self.source = source
 		self.target = target
 
+	def __eq__(self, other: 'Edge') -> bool:
+		"""
+		Evaluate whether the provided edge is
+		equal to current (self-referenced) edge.
+
+		The source and condition define the entire
+		transition state. It is an undefined function
+		if there is more than one edge with the same
+		source state and transition condition.
+
+		:param other: Edge, The edge to compare to.
+		:return: bool
+
+		"""
+
+		return self.source == other.source \
+			and self.condition == other.condition
+
 	def __str__(self) -> str:
 		"""
 		Return the informal string representation
@@ -105,12 +123,17 @@ class Edge(object):
 
 		Set the edge condition.
 
+		:raises: ValueError if transition condition is None.
+
 		"""
 
 		return self.__condition
 
 	@condition.setter
 	def condition(self, condition: Word) -> None:
+		if condition is None:
+			raise ValueError("No Transition Condition Specified.")
+
 		self.__condition = condition
 
 	@property
@@ -120,12 +143,17 @@ class Edge(object):
 
 		Set edge's source node.
 
+		:raises: ValueError if source state is None.
+
 		"""
 
 		return self.__source
 
 	@source.setter
 	def source(self, source: State) -> None:
+		if source is None:
+			raise ValueError("No Source State Specified.")
+
 		self.__source = source
 
 	@property
@@ -135,10 +163,15 @@ class Edge(object):
 
 		Set edge's target node.
 
+		:raises: ValueError if target state is None.
+
 		"""
 
 		return self.__target
 
 	@target.setter
 	def target(self, target: State) -> None:
+		if target is None:
+			raise ValueError("No Target State Specified.")
+
 		self.__target = target

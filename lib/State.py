@@ -96,12 +96,17 @@ class State(object):
 
 		Set the integer label.
 
+		:raises: ValueError if label is <= 0.
+
 		"""
 
 		return self.__label
 
 	@label.setter
 	def label(self, label: int) -> None:
+		if label <= 0:
+			raise ValueError("State Label Must be >= 0.")
+
 		self.__label = label
 
 	@property

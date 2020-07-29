@@ -54,3 +54,14 @@ class Controller(abc.ABC):
 		"""
 
 		raise NotImplementedError
+
+	@abc.abstractmethod
+	def initial_state(self) -> State:
+		"""
+		Return the initial state of the controller.
+
+		:return: State
+
+		"""
+
+		raise NotImplementedError
