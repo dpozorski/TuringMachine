@@ -46,6 +46,28 @@ class Word(object):
 
 		return self.name == other.name
 
+	def __str__(self) -> str:
+		"""
+		Return the informal string representation
+		of the word object.
+
+		:return: str
+
+		"""
+
+		return self.name
+
+	def __repr__(self) -> str:
+		"""
+		Return the canonical string representation
+		of the word object.
+
+		:return: str
+
+		"""
+
+		return self.name
+
 	@property
 	def name(self) -> str:
 		"""

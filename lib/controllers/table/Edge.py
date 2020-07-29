@@ -53,6 +53,33 @@ class Edge(object):
 		self.source = source
 		self.target = target
 
+	def __str__(self) -> str:
+		"""
+		Return the informal string representation
+		of the move action object.
+
+		:return: str
+
+		"""
+
+		return " ".join([
+			repr(self.source),
+			str(self.condition),
+			str(self.action),
+			repr(self.target)
+		])
+
+	def __repr__(self) -> str:
+		"""
+		Return the canonical string representation
+		of the move action object.
+
+		:return: str
+
+		"""
+
+		return self.__str__()
+
 	@property
 	def action(self) -> Action:
 		"""

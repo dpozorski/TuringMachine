@@ -40,6 +40,29 @@ class Write(Action):
 		Action.__init__(self)
 		self.word = word
 
+	def __str__(self) -> str:
+		"""
+		Return the informal string representation
+		of the write action object.
+
+		:return: str
+
+		"""
+
+		return self.word.name
+
+	def __repr__(self) -> str:
+		"""
+		Return the canonical string representation
+		of the write action object.
+
+		:return: str
+
+		"""
+
+		msg = "Write to Tape (value={})"
+		return msg.format(self.word.name)
+
 	def exec(self, head: Head) -> None:
 		"""
 		Execute the write operation.

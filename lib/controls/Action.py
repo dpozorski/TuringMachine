@@ -37,6 +37,30 @@ class Action(abc.ABC):
 		pass
 
 	@abc.abstractmethod
+	def __str__(self) -> str:
+		"""
+		Return the informal string representation
+		of the object.
+
+		:return: str
+
+		"""
+
+		raise NotImplementedError
+
+	@abc.abstractmethod
+	def __repr__(self) -> str:
+		"""
+		Return the canonical string representation
+		of the object.
+
+		:return: str
+
+		"""
+
+		raise NotImplementedError
+
+	@abc.abstractmethod
 	def exec(self, head: Head) -> Any:
 		"""
 		Execute the provided action.
