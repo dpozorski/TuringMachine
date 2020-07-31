@@ -23,6 +23,8 @@ class State(object):
 			with the given node.
 		terminal (:obj:`bool`): Flag indicating whether
 			the state is procedurally terminal or not.
+		root (:obj:`bool`): Flag indicating whether the
+			state is the graph root/init state.
 		op_status (:obj:`int`): Operation status flag
 			for indicating whether the given state is
 			in a defined (status=0) state or an undefined
@@ -30,7 +32,7 @@ class State(object):
 
 	"""
 
-	def __init__(self, label: int, terminal: bool = False, op_status: int = 0):
+	def __init__(self, label: int, terminal: bool = False, root: bool = False, op_status: int = 0):
 		"""
 		State Constructor.
 
@@ -38,6 +40,8 @@ class State(object):
 			with the given node.
 		:param terminal: bool, Flag indicating whether
 			the state is procedurally terminal or not.
+		:param root: bool, Flag indicating whether the
+			state is the graph root/init state.
 		:param op_status: int, Operation status flag for
 			indicating whether the given state is in a defined
 			(status=0) state or an undefined (status=1)
@@ -47,7 +51,42 @@ class State(object):
 
 		self.label = label
 		self.terminal = terminal
+		self.root = root
 		self.op_status = op_status
+
+	def __eq__(self, other: 'State') -> bool:
+		"""
+		Evaluate whether the provided other
+		object is equal to this object.
+
+		:param other: State, Object to compare.
+		:return: bool
+
+		"""
+
+		return self.label == other.label
+
+	def __str__(self) -> str:
+		"""
+		Return the informal string representation
+		of the state object.
+
+		:return: str
+
+		"""
+
+		return str(self.label)
+
+	def __repr__(self) -> str:
+		"""
+		Return the canonical string representation
+		of the state object.
+
+		:return: str
+
+		"""
+
+		return "q" + str(self.label)
 
 	@property
 	def label(self) -> int:
@@ -57,12 +96,17 @@ class State(object):
 
 		Set the integer label.
 
+		:raises: ValueError if label is <= 0.
+
 		"""
 
 		return self.__label
 
 	@label.setter
 	def label(self, label: int) -> None:
+		if label <= 0:
+			raise ValueError("State Label Must be >= 0.")
+
 		self.__label = label
 
 	@property
@@ -80,6 +124,22 @@ class State(object):
 	@terminal.setter
 	def terminal(self, terminal: bool) -> None:
 		self.__terminal = terminal
+
+	@property
+	def root(self) -> bool:
+		"""
+		:obj:`bool` Flag indicating whether the
+			state is the graph root/init state.
+
+		Set the root flag.
+
+		"""
+
+		return self.__terminal
+
+	@root.setter
+	def root(self, root: bool) -> None:
+		self.__root = root
 
 	@property
 	def op_status(self) -> int:

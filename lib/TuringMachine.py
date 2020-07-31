@@ -9,7 +9,6 @@ implementation of the original Turing Machine.
 That is more directly represented in a functional
 architecture of a finite state machine (F: N -> N).
 
-
 """
 
 from lib.Controller import Controller
@@ -53,7 +52,16 @@ class TuringMachine(object):
 
 		"""
 
-		raise NotImplementedError
+		state = None
+
+		while True:
+			state = self.controller.run(
+				state=state,
+				tape_head=self.tape_head
+			)
+
+			if state.terminal or state is None:
+				break
 
 	@property
 	def controller(self) -> Controller:

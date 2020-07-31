@@ -53,3 +53,5 @@ tape_head = deserializer.deserialize(obj_json=json_string)
 
 # construct the Turing Machine
 tm = TuringMachine(controller=controller, tape_head=tape_head)
+
+tm.run()

@@ -52,6 +52,29 @@ class Move(Action):
 		Action.__init__(self)
 		self.direction = direction
 
+	def __str__(self) -> str:
+		"""
+		Return the informal string representation
+		of the move action object.
+
+		:return: str
+
+		"""
+
+		return self.direction
+
+	def __repr__(self) -> str:
+		"""
+		Return the canonical string representation
+		of the move action object.
+
+		:return: str
+
+		"""
+
+		msg = "Move Head (direction={})"
+		return msg.format(self.direction)
+
 	def exec(self, head: Head) -> None:
 		"""
 		Execute the move operation.

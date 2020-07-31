@@ -13,6 +13,7 @@ as a table or graph structure.
 
 import abc
 from lib.Head import Head
+from lib.State import State
 
 __author__ = "Dylan Pozorski"
 __project__ = "TuringMachine"
@@ -37,14 +38,16 @@ class Controller(abc.ABC):
 		pass
 
 	@abc.abstractmethod
-	def run(self, tape_head: Head) -> None:
+	def run(self, state: State, tape_head: Head) -> State:
 		"""
 		Run the controller a single iteration with
 			the the provided tape and head.
 
+		:param state: State, The current state that
+			the tape head is currently located.
 		:param tape_head: Head, The machine's tape
 			head interface for controlling the TM.
-		:return: None
+		:return: State
 
 		:raises: NotImplementedError
 
