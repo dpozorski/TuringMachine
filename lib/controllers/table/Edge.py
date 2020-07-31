@@ -98,6 +98,14 @@ class Edge(object):
 
 		return self.__str__()
 
+	def __hash__(self):
+		return hash(" ".join([
+			repr(self.source),
+			str(self.condition),
+			str(self.action),
+			repr(self.target)
+		]))
+
 	@property
 	def action(self) -> Action:
 		"""

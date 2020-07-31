@@ -72,7 +72,7 @@ class Move(Action):
 
 		"""
 
-		msg = "Move Tape Head (direction={})"
+		msg = "Move Head (direction={})"
 		return msg.format(self.direction)
 
 	def exec(self, head: Head) -> None:

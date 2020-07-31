@@ -44,14 +44,14 @@ with open(controller_path) as f:
 # Convert JSON object to configured Python TM Controller
 controller = deserializer.deserialize(obj_json=json_string)
 
-print(controller)
+# load in Tape Head JSON definition
+with open(tape_head_path) as f:
+	json_string = json.load(f)
 
-# # load in Tape Head JSON definition
-# with open(tape_head_path) as f:
-# 	json_string = json.load(f)
-#
-# # Convert JSON object to configured Python Transformer object
-# tape_head = deserializer.deserialize(obj_json=json_string)
-#
-# # construct the Turing Machine
-# tm = TuringMachine(controller=controller, tape_head=tape_head)
+# Convert JSON object to configured Python Transformer object
+tape_head = deserializer.deserialize(obj_json=json_string)
+
+# construct the Turing Machine
+tm = TuringMachine(controller=controller, tape_head=tape_head)
+
+tm.run()

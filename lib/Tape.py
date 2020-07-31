@@ -61,6 +61,28 @@ class Tape(object):
 		self.default = default
 		self.__data = [] if data is None else data
 
+	def __str__(self) -> str:
+		"""
+		Return the informal string representation
+		of the tape object.
+
+		:return: str
+
+		"""
+
+		return str(self.data)
+
+	def __repr__(self) -> str:
+		"""
+		Return the canonical string representation
+		of the tape object.
+
+		:return: str
+
+		"""
+
+		return str(self.data)
+
 	def __len__(self) -> int:
 		"""
 		Return the length of the tape's visible

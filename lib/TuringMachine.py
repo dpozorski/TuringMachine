@@ -9,9 +9,6 @@ implementation of the original Turing Machine.
 That is more directly represented in a functional
 architecture of a finite state machine (F: N -> N).
 
-TODO:
-	* Finish Run Method
-
 """
 
 from lib.Controller import Controller
@@ -55,16 +52,15 @@ class TuringMachine(object):
 
 		"""
 
-		state = self.controller.initial_state()
-		done = True if state is None else False
+		state = None
 
-		while not done:
+		while True:
 			state = self.controller.run(
 				state=state,
 				tape_head=self.tape_head
 			)
 
-			if state.terminal:
+			if state.terminal or state is None:
 				break
 
 	@property

@@ -32,8 +32,6 @@ class Table(Controller):
 
 	TODO:
 		* Table for invalid functions?
-		* Add decorator for actions/execution
-		* Decorator for operation counter
 
 	"""
 
@@ -161,16 +159,21 @@ class Table(Controller):
 
 		"""
 
-		match = None
-		r = tape_head.read()
+		if state is not None:
+			match = None
+			r = tape_head.read()
 
-		for e in self.entries:
-			if e.source == state and r == e.condition:
-				e.action.exec(head=tape_head)
-				match = e.target
-				break
+			for e in self.entries:
+				if e.source == state and r == e.condition:
+					match = e.target
+					params = [tape_head.operations, state, match, repr(e.action), tape_head]
+					print("{}. State {}->{}, {}, {}".format(*params))
+					e.action.exec(head=tape_head)
+					break
 
-		return match
+			return match
+		else:
+			return self.initial_state()
 
 	def initial_state(self) -> State:
 		"""
