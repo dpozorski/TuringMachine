@@ -208,7 +208,7 @@ class State(object):
 
 		"""
 
-		return self.__terminal
+		return self.__root
 
 	@root.setter
 	def root(self, root: bool) -> None:

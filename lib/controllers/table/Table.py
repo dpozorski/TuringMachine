@@ -16,12 +16,13 @@ import copy
 import random
 from lib.Head import Head
 from lib.State import State
-from lib.controllers.binary_table.Bit import Bit
-from lib.controllers.table.Word import Word
 from typing import Set, List, Tuple
 from lib.controls.Write import Write
 from lib.Controller import Controller
 from lib.controllers.table.Edge import Edge
+from lib.controllers.table.Word import Word
+from lib.controllers.binary_table.Bit import Bit
+from lib.controllers.binary_table.BinaryTable import BinaryTable
 from lib.controllers.binary_table.StateSequence import StateSequence
 from lib.controllers.binary_table.ControlSequence import ControlSequence
 
@@ -35,7 +36,7 @@ class Table(Controller):
 	Table
 
 	Attributes:
-		entries (:obj:`List[Edge]`): The list of mappings
+		entries (:obj:`Set[Edge]`): The list of mappings
 			composing the finite state machine's graph.
 
 	"""
@@ -67,7 +68,7 @@ class Table(Controller):
 
 		return 0 if self.entries is None else len(self.entries)
 
-	def __repr__(self) -> str:
+	def __str__(self) -> str:
 		"""
 		Return the canonical string representation
 		of the table object.
@@ -82,6 +83,17 @@ class Table(Controller):
 			rep += str(entry) + "\n"
 
 		return rep
+
+	def __repr__(self) -> str:
+		"""
+		Return the canonical string representation
+		of the table object.
+
+		:return: str
+
+		"""
+
+		return self.__str__()
 
 	def is_empty(self) -> bool:
 		"""
@@ -106,16 +118,16 @@ class Table(Controller):
 
 		"""
 
-		if not self.__contains__(item=edge):
+		if edge not in self.entries:
 			if edge.source.root:
 				s = self.initial_state()
 
-				if s.label != edge.source.label:
-					if s is None or not s.root:
-						self.__entries.add(edge)
-					else:
-						msg = "Ambiguous Initial State."
-						raise ValueError(msg)
+				if s is None or not s.root \
+					or s.label == edge.source.label:
+					self.__entries.add(edge)
+				elif s.label != edge.source.label:
+					msg = "Ambiguous Initial State."
+					raise ValueError(msg)
 			else:
 				self.__entries.add(edge)
 
@@ -133,23 +145,6 @@ class Table(Controller):
 				if entry == edge:
 					self.entries.remove(edge)
 					break
-
-	def __contains__(self, item: Edge) -> bool:
-		"""
-		Evaluate whether the table contains the
-		specified edge.
-
-		:param item: Edge, The edge to search for.
-		:return: bool
-
-		"""
-
-		if item is not None:
-			for entry in self.entries:
-				if entry == item:
-					return True
-
-		return False
 
 	def run(self, state: State, tape_head: Head) -> State:
 		"""
@@ -222,7 +217,7 @@ class Table(Controller):
 				tmp_w = Word(name=w)
 				e = Edge(source=tmp_s, condition=tmp_w, target=tmp_s)
 
-				if not self.__contains__(item=e):
+				if e not in self.entries:
 					indefinites.append((tmp_s, tmp_w))
 
 		return indefinites
@@ -315,12 +310,12 @@ class Table(Controller):
 		return len(vocab) == 2 and Bit.BINARY_LABEL_1 in vocab \
 			and Bit.BINARY_LABEL_0 in vocab
 
-	def to_binary(self) -> Set[ControlSequence]:
+	def to_binary(self) -> BinaryTable:
 		"""
 		Convert the table into a binary table
 		controller.
 
-		:return: Set[ControlSequence]
+		:return: BinaryTable
 
 		"""
 
@@ -349,15 +344,16 @@ class Table(Controller):
 
 			for node in targets:
 				if node.identity == source.identity:
+					source.operation = node.operation
 					controls.append(
 						ControlSequence(
-							source=node,
+							source=source,
 							condition=condition,
 							target=target
 						)
 					)
 
-		return set(controls)
+		return BinaryTable(entries=set(controls))
 
 	@property
 	def entries(self) -> Set[Edge]:

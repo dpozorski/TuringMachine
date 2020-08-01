@@ -13,6 +13,11 @@ state operation.
 
 import math
 from typing import List
+from lib.State import State
+from lib.controls.Move import Move
+from lib.controls.Write import Write
+from lib.controls.Action import Action
+from lib.controllers.table.Word import Word
 from lib.controllers.binary_table.Bit import Bit
 from lib.utilities.FinalProperty import FinalProperty
 from lib.controllers.binary_table.BinarySequence import BinarySequence
@@ -131,6 +136,22 @@ class StateSequence(BinarySequence):
 		int_rep += (self.operation.to_int() * math.pow(2, curr_len))
 		return int_rep
 
+	def to_state(self) -> State:
+		"""
+		Convert the state sequence to a state
+		object.
+
+		:return: State
+
+		"""
+
+		return State(
+			label=self.label,
+			root=self.root,
+			terminal=self.terminal,
+			op_status=self.op_status
+		)
+
 	@property
 	def operation(self) -> BinarySequence:
 		"""
@@ -191,7 +212,7 @@ class StateSequence(BinarySequence):
 
 		"""
 
-		return self.values[-2].value == Bit.BINARY_LABEL_1
+		return self.values[-4].value == Bit.BINARY_LABEL_1
 
 	@property
 	def root(self) -> bool:
@@ -214,7 +235,7 @@ class StateSequence(BinarySequence):
 
 		"""
 
-		return int(self.values[-1].value)
+		return int(self.values[-3].value)
 
 	@property
 	def values(self) -> List[Bit]:
@@ -223,5 +244,29 @@ class StateSequence(BinarySequence):
 
 		"""
 
-		return self.operation.values \
-			+ self.identity.values
+		return self.identity.values \
+			+ self.operation.values
+
+	@property
+	def label(self) -> int:
+		"""
+		:obj:`int` Return state label.
+
+		"""
+
+		bits = [i.value for i in self.identity.values[1:-2]]
+		return int(''.join(bits), 2)
+
+	def action(self) -> Action:
+		"""
+		:obj:`Action` Return the action
+		associated with the operation sequence.
+
+		"""
+
+		if self.operation.values[0].value == Bit.BINARY_LABEL_0:
+			left = self.operation.values[1].value == Bit.BINARY_LABEL_0
+			direction = Move.DIRECTION_LEFT if left else Move.DIRECTION_RIGHT
+			return Move(direction=direction)
+		else:
+			return Write(word=Word(name=self.operation.values[1].value))
