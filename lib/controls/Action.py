@@ -13,6 +13,7 @@ in a given transition state.
 import abc
 from typing import Any
 from lib.Head import Head
+from lib.controllers.binary_table.BinarySequence import BinarySequence
 
 __author__ = "Dylan Pozorski"
 __project__ = "TuringMachine"
@@ -68,6 +69,17 @@ class Action(abc.ABC):
 		:param head: Head, The tape head object
 			interfacing with the machine's tape.
 		:return: Any
+
+		"""
+
+		raise NotImplementedError
+
+	@abc.abstractmethod
+	def to_binary(self) -> BinarySequence:
+		"""
+		Convert the action into a binary sequence.
+
+		:return: BinarySequence
 
 		"""
 

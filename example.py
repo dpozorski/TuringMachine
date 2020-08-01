@@ -55,3 +55,10 @@ tape_head = deserializer.deserialize(obj_json=json_string)
 tm = TuringMachine(controller=controller, tape_head=tape_head)
 
 tm.run()
+
+controller.close_domain()
+controller.rebase()
+entries = controller.to_binary()
+
+for entry in entries:
+	print(entry)

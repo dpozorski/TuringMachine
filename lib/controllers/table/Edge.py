@@ -11,7 +11,7 @@ nodes in the finite state machine graph.
 """
 
 from lib.State import State
-from lib.data.Word import Word
+from lib.controllers.table.Word import Word
 from lib.controls.Action import Action
 
 __author__ = "Dylan Pozorski"
@@ -34,7 +34,7 @@ class Edge(object):
 
 	"""
 
-	def __init__(self, condition: Word, action: Action, source: State, target: State):
+	def __init__(self, condition: Word, source: State, target: State, action: Action = None):
 		"""
 		Edge Constructor.
 
@@ -98,13 +98,26 @@ class Edge(object):
 
 		return self.__str__()
 
-	def __hash__(self):
+	def __hash__(self) -> int:
+		"""
+		Hash the object for use in inserting
+		records in dictionaries.
+
+		:return: int, Hash value
+
+		"""
+
 		return hash(" ".join([
 			repr(self.source),
-			str(self.condition),
-			str(self.action),
-			repr(self.target)
+			str(self.condition)
 		]))
+
+	def to_binary(self):
+		"""
+
+		:return:
+
+		"""
 
 	@property
 	def action(self) -> Action:

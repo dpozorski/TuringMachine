@@ -11,7 +11,7 @@ controller's dictated action on.
 """
 
 from lib.Tape import Tape
-from lib.data.Word import Word
+from lib.controllers.table.Word import Word
 
 __author__ = "Dylan Pozorski"
 __project__ = "TuringMachine"

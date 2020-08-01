@@ -11,8 +11,9 @@ architecture of a finite state machine (F: N -> N).
 
 """
 
-from lib.Controller import Controller
 from lib.Head import Head
+from lib.State import State
+from lib.Controller import Controller
 
 __author__ = "Dylan Pozorski"
 __project__ = "TuringMachine"
@@ -52,16 +53,21 @@ class TuringMachine(object):
 
 		"""
 
-		state = None
+		done, state = False, None
 
-		while True:
+		while not done:
+			done = True
 			state = self.controller.run(
 				state=state,
 				tape_head=self.tape_head
 			)
 
-			if state.terminal or state is None:
-				break
+			if state is None or (state.terminal and state.op_status == State.FAILURE):
+				print("\033[91mProgram Terminated Unsuccessfully.\033[0m")
+			elif state.terminal and state.op_status == State.SUCCESS:
+				print("\033[92mProgram Terminated Successfully.\033[0m")
+			else:
+				done = False
 
 	@property
 	def controller(self) -> Controller:
