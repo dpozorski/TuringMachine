@@ -86,6 +86,19 @@ class BinarySequence(object):
 
 		return self.__str__() == other.__str__()
 
+	def __lt__(self, other: 'BinarySequence') -> bool:
+		"""
+		Compare whether the the self-referenced
+		binary sequence is less than the other
+		binary sequence.
+
+		:param other: BinarySequence
+		:return: bool
+
+		"""
+
+		return self.__str__() < other.__str__()
+
 	def __hash__(self) -> int:
 		"""
 		Hash the object for use in inserting

@@ -233,23 +233,22 @@ class Table(Controller):
 
 		"""
 
-		edges, exceptions = list(), list()
-		indefinites = self.indefinite_states()
+		edges, indefinites = list(), self.indefinite_states()
 		labeler = max([s.label for s in self.states])
 
-		while len(exceptions) < len(indefinites):
-			labeler += 1
-			s = State(label=labeler, terminal=True, op_status=1)
-			exceptions.append(s)
-
 		for indef in indefinites:
-			index = random.randint(0, len(exceptions) - 1)
+			labeler += 1
+			s = State(
+				label=labeler,
+				terminal=True,
+				op_status=1
+			)
 			edges.append(
 				Edge(
 					source=indef[0],
 					condition=indef[1],
 					action=Write(word=indef[1]),
-					target=exceptions.pop(index)
+					target=s
 				)
 			)
 

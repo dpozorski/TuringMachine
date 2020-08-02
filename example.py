@@ -19,7 +19,7 @@ import os
 deserializer = JSONDeserializer()
 
 # define the controller type
-controller_type = "binary_table"
+controller_type = "table"
 
 # define the operation type
 operation_type = "multiplication"
@@ -44,10 +44,6 @@ with open(controller_path) as f:
 # Convert JSON object to configured Python TM Controller
 controller = deserializer.deserialize(obj_json=json_string)
 
-# controller.close_domain()
-# controller.rebase()
-# controller = controller.to_binary()
-
 # load in Tape Head JSON definition
 with open(tape_head_path) as f:
 	json_string = json.load(f)
@@ -60,11 +56,13 @@ tm = TuringMachine(controller=controller, tape_head=tape_head)
 
 tm.run()
 
+controller = controller.to_binary()
+# controller.rebase()
+
 print(controller)
 
-# controller.close_domain()
-# controller.rebase()
-# entries = controller.to_binary()
+controller.close_domain()
 
+print(controller)
 # for entry in entries:
 # 	print(entry, entry.source.root, entry.source.label, entry.target.root, entry.target.label)

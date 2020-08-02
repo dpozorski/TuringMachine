@@ -9,16 +9,18 @@ Turing Machine as the entire functional (edge)
 relation between some defined present state and
 the next target state.
 
-TODO:
-	* Add indef methods to this controller
-
 """
 
-from typing import Set
+import copy
 from lib.Head import Head
 from lib.State import State
+from typing import Set, List, Tuple
+from lib.controls.Write import Write
 from lib.Controller import Controller
+from lib.controllers.table.Word import Word
+from lib.controllers.binary_table.Bit import Bit
 from lib.controllers.binary_table.StateSequence import StateSequence
+from lib.controllers.binary_table.BinarySequence import BinarySequence
 from lib.controllers.binary_table.ControlSequence import ControlSequence
 
 __author__ = "Dylan Pozorski"
@@ -108,11 +110,17 @@ class BinaryTable(Controller):
 		:return: None
 
 		:raises: ValueError If an edge is added
-			that leads to an ambiguous init state.
+			that leads to an ambiguous init state or
+			if a control sequence is added that is not
+			the same size as the rest of the control
+			sequences.
 
 		"""
 
 		if entry not in self.entries:
+			if len(self.entries) > 0 and len(entry) != len(list(self.entries)[0]):
+				raise ValueError("Control Sequence of Different Lengths")
+
 			if entry.source.root:
 				s = self.initial_sequence()
 
@@ -160,7 +168,6 @@ class BinaryTable(Controller):
 			identity = state.label
 
 			for e in self.entries:
-				# print(e.source.label, identity, int(r.name), e.condition.to_int())
 				if e.source.label == identity and int(r.name) == e.condition.to_int():
 					match = e.target.to_state()
 					action = e.target.action()
@@ -193,6 +200,116 @@ class BinaryTable(Controller):
 				lowest = entry.source
 
 		return lowest
+
+	def indefinite_states(self) -> List[Tuple[StateSequence, Bit]]:
+		"""
+		Return a list of the undefined control sequences.
+		Undefined, here, means that it is a control sequence
+		with a valid source state sequence which does not
+		have coverage over all possible transition conditions.
+
+		:return: List[State]
+
+		"""
+
+		states = list()
+		pairs = [(entry.source.label, entry.condition.values[0].value) for entry in self.entries]
+
+		for entry in self.entries:
+			for condition in [Bit.BINARY_LABEL_0, Bit.BINARY_LABEL_1]:
+				if (entry.source.label, condition) not in pairs:
+					states.append((entry.source, Bit(value=condition)))
+
+		return states
+
+	def indefinite_sequences(self) -> List[ControlSequence]:
+		"""
+		Return a list of indefinite control sequences. With
+		a dummy write action (writing the same value as currently)
+		on the tape before transitioning to a terminal
+		node.
+
+		:return: List[ControlSequence]
+
+		"""
+
+		sequences, exceptions = list(), list()
+		indefinites = self.indefinite_states()
+		bits = len(list(self.entries)[0].source.identity) \
+			- (StateSequence.MIN_STATE_SEQUENCE_LEN - 3)
+		labeler = -1
+
+		for e in self.entries:
+			labeler = max(labeler, e.source.label, e.target.label)
+
+		for indef in indefinites:
+			labeler += 1
+			sequences.append(
+				ControlSequence(
+					source=indef[0],
+					condition=BinarySequence(values=[indef[1]]),
+					target=StateSequence(
+						identity=State(
+							label=labeler,
+							terminal=True,
+							op_status=State.FAILURE
+						).to_binary(label_size=bits),
+						operation=Write(word=Word(name=indef[1].value)).to_binary()
+					)
+				)
+			)
+
+		return sequences
+
+	def close_domain(self) -> None:
+		"""
+		Compute the domain's closure and add missing
+		control sequences to the domain. This primarily
+		deals with adding all of the indefinite control
+		sequences to the control set and terminating them
+		with failure nodes.
+
+		:return: None
+
+		"""
+
+		sequences = list(self.indefinite_sequences())
+		sequences = list(self.entries) + sequences
+		self.__entries = set(sequences)
+
+	def rebase(self) -> None:
+		"""
+		Rebasing the table reassigns the state
+		labels into a contiguous listing of integer
+		labels.
+
+		:return: None
+
+		"""
+
+		states, rebased_seqs = list(), list()
+
+		for entry in self.entries:
+			states.append(entry.source.identity)
+			states.append(entry.target.identity)
+
+		states = sorted(list(set(states)))
+		bits = len(list(self.entries)[0].source.identity) \
+			- (StateSequence.MIN_STATE_SEQUENCE_LEN - 3) \
+			if len(self.entries) > 0 else 0
+		converter = '{0:0' + str(bits) + 'b}'
+
+		for entry in self.entries:
+			n = copy.deepcopy(entry)
+			ident = converter.format(states.index(n.source.identity))
+			values = [n.source.identity.values[0]] + [Bit(value=c) for c in ident] + n.source.identity.values[-2:]
+			n.source.identity = BinarySequence(values=values)
+			ident = converter.format(states.index(n.target.identity))
+			values = [n.target.identity.values[0]] + [Bit(value=c) for c in ident] + n.target.identity.values[-2:]
+			n.target.identity = BinarySequence(values=values)
+			rebased_seqs.append(n)
+
+		self.__entries = rebased_seqs
 
 	@property
 	def entries(self) -> Set[ControlSequence]:
