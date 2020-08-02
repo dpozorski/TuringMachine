@@ -10,16 +10,14 @@ relation between some defined present state and
 the next target state.
 
 TODO:
-	* Need to make sure init sequence is added to listing
+	* Add indef methods to this controller
 
 """
 
-import math
 from typing import Set
 from lib.Head import Head
 from lib.State import State
 from lib.Controller import Controller
-from lib.controllers.table.Edge import Edge
 from lib.controllers.binary_table.StateSequence import StateSequence
 from lib.controllers.binary_table.ControlSequence import ControlSequence
 

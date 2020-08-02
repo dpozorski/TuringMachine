@@ -332,6 +332,7 @@ class Table(Controller):
 			)
 
 		for entry in self.entries:
+			found = False
 			source = StateSequence(
 				identity=entry.source.to_binary(label_size=bits),
 				operation=entry.action.to_binary()  # just a placeholder
@@ -344,6 +345,7 @@ class Table(Controller):
 
 			for node in targets:
 				if node.identity == source.identity:
+					found = True
 					source.operation = node.operation
 					controls.append(
 						ControlSequence(
@@ -352,6 +354,17 @@ class Table(Controller):
 							target=target
 						)
 					)
+
+			if not found and source.root:
+				w = Word(name=condition.values[1].value)
+				source.operation = Write(word=w).to_binary()
+				controls.append(
+					ControlSequence(
+						source=source,
+						condition=condition,
+						target=target
+					)
+				)
 
 		return BinaryTable(entries=set(controls))
 

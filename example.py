@@ -19,10 +19,10 @@ import os
 deserializer = JSONDeserializer()
 
 # define the controller type
-controller_type = "table"
+controller_type = "binary_table"
 
 # define the operation type
-operation_type = "addition"
+operation_type = "multiplication"
 
 # select the example file to load in
 example = "example-001"
@@ -45,8 +45,8 @@ with open(controller_path) as f:
 controller = deserializer.deserialize(obj_json=json_string)
 
 # controller.close_domain()
-controller.rebase()
-controller = controller.to_binary()
+# controller.rebase()
+# controller = controller.to_binary()
 
 # load in Tape Head JSON definition
 with open(tape_head_path) as f:
@@ -59,6 +59,8 @@ tape_head = deserializer.deserialize(obj_json=json_string)
 tm = TuringMachine(controller=controller, tape_head=tape_head)
 
 tm.run()
+
+print(controller)
 
 # controller.close_domain()
 # controller.rebase()
