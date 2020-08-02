@@ -10,8 +10,8 @@ tape for the Turing Machine.
 """
 
 from typing import List
-from lib.data.Word import Word
-from lib.data.Vocabulary import Vocabulary
+from lib.controllers.table.Word import Word
+from lib.controllers.table.Vocabulary import Vocabulary
 
 __author__ = "Dylan Pozorski"
 __project__ = "TuringMachine"
@@ -60,6 +60,28 @@ class Tape(object):
 		self.__vocab = vocab
 		self.default = default
 		self.__data = [] if data is None else data
+
+	def __str__(self) -> str:
+		"""
+		Return the informal string representation
+		of the tape object.
+
+		:return: str
+
+		"""
+
+		return str(self.data)
+
+	def __repr__(self) -> str:
+		"""
+		Return the canonical string representation
+		of the tape object.
+
+		:return: str
+
+		"""
+
+		return str(self.data)
 
 	def __len__(self) -> int:
 		"""

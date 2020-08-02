@@ -11,7 +11,9 @@ operation to perform on the tape head.
 
 from lib.Head import Head
 from lib.controls.Action import Action
+from lib.controllers.binary_table.Bit import Bit
 from lib.utilities.FinalProperty import FinalProperty
+from lib.controllers.binary_table.BinarySequence import BinarySequence
 
 __author__ = "Dylan Pozorski"
 __project__ = "TuringMachine"
@@ -27,6 +29,12 @@ class Move(Action):
 			the type head on the machine's tape.
 
 	"""
+
+	"""
+	Operation Code.
+
+	"""
+	OP_CODE = FinalProperty[str]("0")
 
 	"""
 	The class constant for moving left.
@@ -52,6 +60,29 @@ class Move(Action):
 		Action.__init__(self)
 		self.direction = direction
 
+	def __str__(self) -> str:
+		"""
+		Return the informal string representation
+		of the move action object.
+
+		:return: str
+
+		"""
+
+		return self.direction
+
+	def __repr__(self) -> str:
+		"""
+		Return the canonical string representation
+		of the move action object.
+
+		:return: str
+
+		"""
+
+		msg = "Move Head (direction={})"
+		return msg.format(self.direction)
+
 	def exec(self, head: Head) -> None:
 		"""
 		Execute the move operation.
@@ -66,6 +97,24 @@ class Move(Action):
 			head.left()
 		else:
 			head.right()
+
+	def to_binary(self) -> BinarySequence:
+		"""
+		Convert the write action into a binary sequence.
+
+		:return: BinarySequence
+
+		"""
+
+		param_code = Bit.BINARY_LABEL_1
+
+		if self.direction == self.DIRECTION_LEFT:
+			param_code = Bit.BINARY_LABEL_0
+
+		return BinarySequence(values=[
+			Bit(value=self.OP_CODE),
+			Bit(value=param_code)
+		])
 
 	@property
 	def direction(self) -> str:

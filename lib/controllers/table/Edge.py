@@ -11,7 +11,7 @@ nodes in the finite state machine graph.
 """
 
 from lib.State import State
-from lib.data.Word import Word
+from lib.controllers.table.Word import Word
 from lib.controls.Action import Action
 
 __author__ = "Dylan Pozorski"
@@ -34,7 +34,7 @@ class Edge(object):
 
 	"""
 
-	def __init__(self, condition: Word, action: Action, source: State, target: State):
+	def __init__(self, condition: Word, source: State, target: State, action: Action = None):
 		"""
 		Edge Constructor.
 
@@ -52,6 +52,72 @@ class Edge(object):
 		self.action = action
 		self.source = source
 		self.target = target
+
+	def __eq__(self, other: 'Edge') -> bool:
+		"""
+		Evaluate whether the provided edge is
+		equal to current (self-referenced) edge.
+
+		The source and condition define the entire
+		transition state. It is an undefined function
+		if there is more than one edge with the same
+		source state and transition condition.
+
+		:param other: Edge, The edge to compare to.
+		:return: bool
+
+		"""
+
+		return self.source == other.source \
+			and self.condition == other.condition
+
+	def __str__(self) -> str:
+		"""
+		Return the informal string representation
+		of the move action object.
+
+		:return: str
+
+		"""
+
+		return " ".join([
+			repr(self.source),
+			str(self.condition),
+			str(self.action),
+			repr(self.target)
+		])
+
+	def __repr__(self) -> str:
+		"""
+		Return the canonical string representation
+		of the move action object.
+
+		:return: str
+
+		"""
+
+		return self.__str__()
+
+	def __hash__(self) -> int:
+		"""
+		Hash the object for use in inserting
+		records in dictionaries.
+
+		:return: int, Hash value
+
+		"""
+
+		return hash(" ".join([
+			repr(self.source),
+			str(self.condition)
+		]))
+
+	def to_binary(self):
+		"""
+
+		:return:
+
+		"""
 
 	@property
 	def action(self) -> Action:
@@ -78,12 +144,17 @@ class Edge(object):
 
 		Set the edge condition.
 
+		:raises: ValueError if transition condition is None.
+
 		"""
 
 		return self.__condition
 
 	@condition.setter
 	def condition(self, condition: Word) -> None:
+		if condition is None:
+			raise ValueError("No Transition Condition Specified.")
+
 		self.__condition = condition
 
 	@property
@@ -93,12 +164,17 @@ class Edge(object):
 
 		Set edge's source node.
 
+		:raises: ValueError if source state is None.
+
 		"""
 
 		return self.__source
 
 	@source.setter
 	def source(self, source: State) -> None:
+		if source is None:
+			raise ValueError("No Source State Specified.")
+
 		self.__source = source
 
 	@property
@@ -108,10 +184,15 @@ class Edge(object):
 
 		Set edge's target node.
 
+		:raises: ValueError if target state is None.
+
 		"""
 
 		return self.__target
 
 	@target.setter
 	def target(self, target: State) -> None:
+		if target is None:
+			raise ValueError("No Target State Specified.")
+
 		self.__target = target

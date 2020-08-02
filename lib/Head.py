@@ -11,7 +11,7 @@ controller's dictated action on.
 """
 
 from lib.Tape import Tape
-from lib.data.Word import Word
+from lib.controllers.table.Word import Word
 
 __author__ = "Dylan Pozorski"
 __project__ = "TuringMachine"
@@ -41,6 +41,38 @@ class Head(object):
 		if len(self.__tape) == 0:
 			self.write(word=self.tape.default)
 
+	def __str__(self) -> str:
+		"""
+		Return the informal string representation
+		of the tape head object.
+
+		:return: str
+
+		"""
+
+		p = []
+
+		for i in range(0, len(self.tape.data)):
+			d = str(self.tape.data[i])
+
+			if i == self.position:
+				d = '\033[1m\033[92m' + d + '\033[0m'
+
+			p.append(d)
+
+		return " ".join(p)
+
+	def __repr__(self) -> str:
+		"""
+		Return the canonical string representation
+		of the tape head object.
+
+		:return: str
+
+		"""
+
+		return self.__str__()
+
 	def left(self) -> None:
 		"""
 		Moves the tape head left.
@@ -51,8 +83,8 @@ class Head(object):
 
 		if self.position - 1 < 0:
 			self.tape.data.insert(
-				index=self.position,
-				object=self.tape.default
+				self.position,
+				self.tape.default
 			)
 		else:
 			self.__position -= 1
