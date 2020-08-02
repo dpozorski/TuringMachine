@@ -1,0 +1,220 @@
+{
+  "__class__": "BinaryTable",
+  "__module__": "lib.controllers.binary_table.BinaryTable",
+  "entries": [
+    {
+        "__class__": "ControlSequence",
+        "__module__": "lib.controllers.binary_table.ControlSequence",
+        "source": {
+            "__class__": "StateSequence",
+            "__module__": "lib.controllers.binary_table.StateSequence",
+            "identity": {
+                "__class__": "BinarySequence",
+                "__module__": "lib.controllers.binary_table.BinarySequence",
+                "values": [
+                    {
+                        "__class__": "Bit",
+                        "__module__": "lib.controllers.binary_table.Bit",
+                        "value": "1"
+                    },
+                    {
+                        "__class__": "Bit",
+                        "__module__": "lib.controllers.binary_table.Bit",
+                        "value": "0"
+                    },
+                    {
+                        "__class__": "Bit",
+                        "__module__": "lib.controllers.binary_table.Bit",
+                        "value": "0"
+                    },
+                    {
+                        "__class__": "Bit",
+                        "__module__": "lib.controllers.binary_table.Bit",
+                        "value": "0"
+                    }
+                ]
+            },
+            "operation": {
+                "__class__": "BinarySequence",
+                "__module__": "lib.controllers.binary_table.BinarySequence",
+                "values": [
+                    {
+                        "__class__": "Bit",
+                        "__module__": "lib.controllers.binary_table.Bit",
+                        "value": "0"
+                    },
+                    {
+                        "__class__": "Bit",
+                        "__module__": "lib.controllers.binary_table.Bit",
+                        "value": "1"
+                    }
+                ]
+            }
+        },
+        "condition": {
+            "__class__": "BinarySequence",
+            "__module__": "lib.controllers.binary_table.BinarySequence",
+            "values": [
+                {
+                    "__class__": "Bit",
+                    "__module__": "lib.controllers.binary_table.Bit",
+                    "value": "1"
+                }
+            ]
+        },
+        "target": {
+            "__class__": "StateSequence",
+            "__module__": "lib.controllers.binary_table.StateSequence",
+            "identity": {
+                "__class__": "BinarySequence",
+                "__module__": "lib.controllers.binary_table.BinarySequence",
+                "values": [
+                    {
+                        "__class__": "Bit",
+                        "__module__": "lib.controllers.binary_table.Bit",
+                        "value": "1"
+                    },
+                    {
+                        "__class__": "Bit",
+                        "__module__": "lib.controllers.binary_table.Bit",
+                        "value": "0"
+                    },
+                    {
+                        "__class__": "Bit",
+                        "__module__": "lib.controllers.binary_table.Bit",
+                        "value": "0"
+                    },
+                    {
+                        "__class__": "Bit",
+                        "__module__": "lib.controllers.binary_table.Bit",
+                        "value": "0"
+                    }
+                ]
+            },
+            "operation": {
+                "__class__": "BinarySequence",
+                "__module__": "lib.controllers.binary_table.BinarySequence",
+                "values": [
+                    {
+                        "__class__": "Bit",
+                        "__module__": "lib.controllers.binary_table.Bit",
+                        "value": "0"
+                    },
+                    {
+                        "__class__": "Bit",
+                        "__module__": "lib.controllers.binary_table.Bit",
+                        "value": "1"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "__class__": "ControlSequence",
+        "__module__": "lib.controllers.binary_table.ControlSequence",
+        "source": {
+            "__class__": "StateSequence",
+            "__module__": "lib.controllers.binary_table.StateSequence",
+            "identity": {
+                "__class__": "BinarySequence",
+                "__module__": "lib.controllers.binary_table.BinarySequence",
+                "values": [
+                    {
+                        "__class__": "Bit",
+                        "__module__": "lib.controllers.binary_table.Bit",
+                        "value": "1"
+                    },
+                    {
+                        "__class__": "Bit",
+                        "__module__": "lib.controllers.binary_table.Bit",
+                        "value": "0"
+                    },
+                    {
+                        "__class__": "Bit",
+                        "__module__": "lib.controllers.binary_table.Bit",
+                        "value": "0"
+                    },
+                    {
+                        "__class__": "Bit",
+                        "__module__": "lib.controllers.binary_table.Bit",
+                        "value": "0"
+                    }
+                ]
+            },
+            "operation": {
+                "__class__": "BinarySequence",
+                "__module__": "lib.controllers.binary_table.BinarySequence",
+                "values": [
+                    {
+                        "__class__": "Bit",
+                        "__module__": "lib.controllers.binary_table.Bit",
+                        "value": "0"
+                    },
+                    {
+                        "__class__": "Bit",
+                        "__module__": "lib.controllers.binary_table.Bit",
+                        "value": "1"
+                    }
+                ]
+            }
+        },
+        "condition": {
+            "__class__": "BinarySequence",
+            "__module__": "lib.controllers.binary_table.BinarySequence",
+            "values": [
+                {
+                    "__class__": "Bit",
+                    "__module__": "lib.controllers.binary_table.Bit",
+                    "value": "0"
+                }
+            ]
+        },
+        "target": {
+            "__class__": "StateSequence",
+            "__module__": "lib.controllers.binary_table.StateSequence",
+            "identity": {
+                "__class__": "BinarySequence",
+                "__module__": "lib.controllers.binary_table.BinarySequence",
+                "values": [
+                    {
+                        "__class__": "Bit",
+                        "__module__": "lib.controllers.binary_table.Bit",
+                        "value": "0"
+                    },
+                    {
+                        "__class__": "Bit",
+                        "__module__": "lib.controllers.binary_table.Bit",
+                        "value": "1"
+                    },
+                    {
+                        "__class__": "Bit",
+                        "__module__": "lib.controllers.binary_table.Bit",
+                        "value": "1"
+                    },
+                    {
+                        "__class__": "Bit",
+                        "__module__": "lib.controllers.binary_table.Bit",
+                        "value": "0"
+                    }
+                ]
+            },
+            "operation": {
+                "__class__": "BinarySequence",
+                "__module__": "lib.controllers.binary_table.BinarySequence",
+                "values": [
+                    {
+                        "__class__": "Bit",
+                        "__module__": "lib.controllers.binary_table.Bit",
+                        "value": "1"
+                    },
+                    {
+                        "__class__": "Bit",
+                        "__module__": "lib.controllers.binary_table.Bit",
+                        "value": "1"
+                    }
+                ]
+            }
+        }
+    }
+  ]
+}

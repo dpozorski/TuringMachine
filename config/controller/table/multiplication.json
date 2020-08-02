@@ -7,7 +7,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -15,7 +15,7 @@
         "__module__": "lib.controls.Write",
         "word": {
           "__class__": "Word",
-          "__module__": "lib.data.Word",
+          "__module__": "lib.controllers.table.Word",
           "name": "0"
         }
       },
@@ -37,7 +37,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "0"
       },
       "action": {
@@ -62,7 +62,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "0"
       },
       "action": {
@@ -86,7 +86,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -94,7 +94,7 @@
         "__module__": "lib.controls.Write",
         "word": {
           "__class__": "Word",
-          "__module__": "lib.data.Word",
+          "__module__": "lib.controllers.table.Word",
           "name": "0"
         }
       },
@@ -114,7 +114,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "0"
       },
       "action": {
@@ -138,7 +138,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "0"
       },
       "action": {
@@ -146,7 +146,7 @@
         "__module__": "lib.controls.Write",
         "word": {
           "__class__": "Word",
-          "__module__": "lib.data.Word",
+          "__module__": "lib.controllers.table.Word",
           "name": "0"
         }
       },
@@ -167,7 +167,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -175,7 +175,7 @@
         "__module__": "lib.controls.Write",
         "word": {
           "__class__": "Word",
-          "__module__": "lib.data.Word",
+          "__module__": "lib.controllers.table.Word",
           "name": "1"
         }
       },
@@ -195,7 +195,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -219,7 +219,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "0"
       },
       "action": {
@@ -243,7 +243,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -267,7 +267,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "0"
       },
       "action": {
@@ -291,7 +291,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -299,7 +299,7 @@
         "__module__": "lib.controls.Write",
         "word": {
           "__class__": "Word",
-          "__module__": "lib.data.Word",
+          "__module__": "lib.controllers.table.Word",
           "name": "0"
         }
       },
@@ -319,7 +319,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "0"
       },
       "action": {
@@ -343,7 +343,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "0"
       },
       "action": {
@@ -367,7 +367,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -375,7 +375,7 @@
         "__module__": "lib.controls.Write",
         "word": {
           "__class__": "Word",
-          "__module__": "lib.data.Word",
+          "__module__": "lib.controllers.table.Word",
           "name": "1"
         }
       },
@@ -395,7 +395,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -403,7 +403,7 @@
         "__module__": "lib.controls.Write",
         "word": {
           "__class__": "Word",
-          "__module__": "lib.data.Word",
+          "__module__": "lib.controllers.table.Word",
           "name": "0"
         }
       },
@@ -423,7 +423,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "0"
       },
       "action": {
@@ -447,7 +447,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "0"
       },
       "action": {
@@ -472,7 +472,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -480,7 +480,7 @@
         "__module__": "lib.controls.Write",
         "word": {
           "__class__": "Word",
-          "__module__": "lib.data.Word",
+          "__module__": "lib.controllers.table.Word",
           "name": "1"
         }
       },
@@ -500,7 +500,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -524,7 +524,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "0"
       },
       "action": {
@@ -548,7 +548,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -556,7 +556,7 @@
         "__module__": "lib.controls.Write",
         "word": {
           "__class__": "Word",
-          "__module__": "lib.data.Word",
+          "__module__": "lib.controllers.table.Word",
           "name": "0"
         }
       },
@@ -576,7 +576,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "0"
       },
       "action": {
@@ -600,7 +600,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -624,7 +624,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "0"
       },
       "action": {
@@ -648,7 +648,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -672,7 +672,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "0"
       },
       "action": {
@@ -696,7 +696,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -704,7 +704,7 @@
         "__module__": "lib.controls.Write",
         "word": {
           "__class__": "Word",
-          "__module__": "lib.data.Word",
+          "__module__": "lib.controllers.table.Word",
           "name": "1"
         }
       },
@@ -724,7 +724,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -732,7 +732,7 @@
         "__module__": "lib.controls.Write",
         "word": {
           "__class__": "Word",
-          "__module__": "lib.data.Word",
+          "__module__": "lib.controllers.table.Word",
           "name": "0"
         }
       },
@@ -752,7 +752,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "0"
       },
       "action": {
@@ -776,7 +776,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "0"
       },
       "action": {
@@ -800,7 +800,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "0"
       },
       "action": {
@@ -808,7 +808,7 @@
         "__module__": "lib.controls.Write",
         "word": {
           "__class__": "Word",
-          "__module__": "lib.data.Word",
+          "__module__": "lib.controllers.table.Word",
           "name": "1"
         }
       },
@@ -828,7 +828,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -852,7 +852,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -876,7 +876,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -900,7 +900,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "0"
       },
       "action": {
@@ -925,7 +925,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -949,7 +949,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -973,7 +973,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "0"
       },
       "action": {
@@ -997,7 +997,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "0"
       },
       "action": {
@@ -1021,7 +1021,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -1029,7 +1029,7 @@
         "__module__": "lib.controls.Write",
         "word": {
           "__class__": "Word",
-          "__module__": "lib.data.Word",
+          "__module__": "lib.controllers.table.Word",
           "name": "0"
         }
       },
@@ -1049,7 +1049,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "0"
       },
       "action": {
@@ -1073,7 +1073,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "0"
       },
       "action": {
@@ -1081,7 +1081,7 @@
         "__module__": "lib.controls.Write",
         "word": {
           "__class__": "Word",
-          "__module__": "lib.data.Word",
+          "__module__": "lib.controllers.table.Word",
           "name": "1"
         }
       },
@@ -1101,7 +1101,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -1125,7 +1125,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "0"
       },
       "action": {
@@ -1149,7 +1149,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -1173,7 +1173,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -1197,7 +1197,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "0"
       },
       "action": {
@@ -1221,7 +1221,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -1245,7 +1245,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -1269,7 +1269,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "0"
       },
       "action": {
@@ -1293,7 +1293,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -1317,7 +1317,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -1341,7 +1341,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "0"
       },
       "action": {
@@ -1349,7 +1349,7 @@
         "__module__": "lib.controls.Write",
         "word": {
           "__class__": "Word",
-          "__module__": "lib.data.Word",
+          "__module__": "lib.controllers.table.Word",
           "name": "1"
         }
       },
@@ -1369,7 +1369,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "0"
       },
       "action": {
@@ -1377,7 +1377,7 @@
         "__module__": "lib.controls.Write",
         "word": {
           "__class__": "Word",
-          "__module__": "lib.data.Word",
+          "__module__": "lib.controllers.table.Word",
           "name": "1"
         }
       },
@@ -1397,7 +1397,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -1421,7 +1421,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "0"
       },
       "action": {
@@ -1445,7 +1445,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "1"
       },
       "action": {
@@ -1469,7 +1469,7 @@
       "__module__": "lib.controllers.table.Edge",
       "condition": {
         "__class__": "Word",
-        "__module__": "lib.data.Word",
+        "__module__": "lib.controllers.table.Word",
         "name": "0"
       },
       "action": {

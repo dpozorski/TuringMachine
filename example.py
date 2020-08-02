@@ -22,7 +22,7 @@ deserializer = JSONDeserializer()
 controller_type = "table"
 
 # define the operation type
-operation_type = "addition"
+operation_type = "multiplication"
 
 # select the example file to load in
 example = "example-001"
@@ -55,3 +55,14 @@ tape_head = deserializer.deserialize(obj_json=json_string)
 tm = TuringMachine(controller=controller, tape_head=tape_head)
 
 tm.run()
+
+controller = controller.to_binary()
+# controller.rebase()
+
+print(controller)
+
+controller.close_domain()
+
+print(controller)
+# for entry in entries:
+# 	print(entry, entry.source.root, entry.source.label, entry.target.root, entry.target.label)

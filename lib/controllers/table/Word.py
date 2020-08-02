@@ -10,6 +10,9 @@ or present on the tape's domain).
 
 """
 
+from lib.controllers.binary_table.Bit import Bit
+from lib.controllers.binary_table.BinarySequence import BinarySequence
+
 __author__ = "Dylan Pozorski"
 __project__ = "TuringMachine"
 __class__ = "Word"
@@ -33,6 +36,17 @@ class Word(object):
 		"""
 
 		self.name = name
+
+	def __hash__(self) -> int:
+		"""
+		Hash the object for use in inserting
+		records in dictionaries.
+
+		:return: int, Hash value
+
+		"""
+
+		return hash(self.name)
 
 	def __eq__(self, other: 'Word') -> bool:
 		"""
@@ -67,6 +81,22 @@ class Word(object):
 		"""
 
 		return self.name
+
+	def to_binary(self) -> BinarySequence:
+		"""
+		Convert the word into a binary sequence.
+
+		:return: BinarySequence
+
+		"""
+
+		bits = [Bit.BINARY_LABEL_0, Bit.BINARY_LABEL_1]
+
+		if self.name not in bits:
+			msg = "Unable to Cast {} to Binary Sequence."
+			raise ValueError(msg.format(self.name))
+
+		return BinarySequence(values=[Bit(value=self.name)])
 
 	@property
 	def name(self) -> str:

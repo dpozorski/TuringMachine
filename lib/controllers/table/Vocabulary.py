@@ -11,7 +11,7 @@ the machine's tape.
 
 """
 
-from lib.data.Word import Word
+from lib.controllers.table.Word import Word
 from typing import Set
 
 __author__ = "Dylan Pozorski"

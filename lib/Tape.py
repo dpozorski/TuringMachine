@@ -10,8 +10,8 @@ tape for the Turing Machine.
 """
 
 from typing import List
-from lib.data.Word import Word
-from lib.data.Vocabulary import Vocabulary
+from lib.controllers.table.Word import Word
+from lib.controllers.table.Vocabulary import Vocabulary
 
 __author__ = "Dylan Pozorski"
 __project__ = "TuringMachine"
