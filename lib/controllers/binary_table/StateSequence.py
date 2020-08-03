@@ -133,8 +133,7 @@ class StateSequence(BinarySequence):
 
 		int_rep = self.identity.to_int()
 		curr_len = len(self.identity)
-		int_rep += (self.operation.to_int() * math.pow(2, curr_len))
-		return int_rep
+		return int_rep + int(self.operation.to_int() * math.pow(2, curr_len))
 
 	def to_state(self) -> State:
 		"""

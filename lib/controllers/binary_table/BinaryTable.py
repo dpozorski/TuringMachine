@@ -12,11 +12,12 @@ the next target state.
 """
 
 import copy
-from lib.Head import Head
 from lib.State import State
 from typing import Set, List, Tuple
 from lib.controls.Write import Write
 from lib.Controller import Controller
+from lib.controllers.Input import Input
+from lib.controllers.Output import Output
 from lib.controllers.table.Word import Word
 from lib.controllers.binary_table.Bit import Bit
 from lib.controllers.binary_table.StateSequence import StateSequence
@@ -149,37 +150,39 @@ class BinaryTable(Controller):
 					self.entries.remove(entry)
 					break
 
-	def run(self, state: State, tape_head: Head) -> State:
+	def next(self, state: State, input: Input) -> Output:
 		"""
-		Run the controller a single iteration with
-			the the provided tape and head.
+		From the specified input, compute the transition
+		action and the next graph state.
 
 		:param state: State, The current state that
 			the tape head is currently located.
-		:param tape_head: Head, The machine's tape
-			head interface for controlling the TM.
-		:return: State
+		:param input: Input, The current word
+			being read by the print head on the TM.
+		:return: Output
 
 		"""
 
+		action, match = None, None
+
 		if state is not None:
-			match = None
-			r = tape_head.read()
 			identity = state.label
 
 			for e in self.entries:
-				if e.source.label == identity and int(r.name) == e.condition.to_int():
+				if input.word.name == str(e.condition.to_int()) \
+						and e.source.label == identity:
 					match = e.target.to_state()
 					action = e.target.action()
-					params = [tape_head.operations, state, match, repr(action), tape_head]
-					print("{}. State {}->{}, {}, {}".format(*params))
-					action.exec(head=tape_head)
 					break
-
-			return match
 		else:
 			init = self.initial_sequence()
-			return None if init is None else init.to_state()
+			match = None if init is None else init.to_state()
+
+		return Output(
+			action=action,
+			state=match,
+			timestep=input.timestep
+		)
 
 	def initial_sequence(self) -> StateSequence:
 		"""
