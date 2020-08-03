@@ -77,12 +77,10 @@ class ControlSequence(BinarySequence):
 
 		"""
 
-		int_rep = self.target.to_int()
-		curr_len = len(self.target)
+		int_rep, curr_len = self.target.to_int(), len(self.target)
 		int_rep += (self.condition.to_int() * math.pow(2, curr_len))
-		curr_len = len(self.condition)
-		int_rep += (self.source.to_int() * math.pow(2, curr_len))
-		return int_rep
+		curr_len += len(self.condition)
+		return int_rep + int(self.source.to_int() * math.pow(2, curr_len))
 
 	@property
 	def source(self) -> StateSequence:

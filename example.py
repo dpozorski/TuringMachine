@@ -7,8 +7,8 @@ import os
 # ******************** START - RECOMMENDED STEPS FOR EXECUTION ********************
 ###################################################################################
 #
-# 1) Update the controller_type (table or network)
-# 2) Update the operation_type (addition, multiplication, successor)
+# 1) Update the controller_type (table, binary_table, or network)
+# 2) Update the operation_type (addition, multiplication, or successor)
 # 3) Update the example (example-XXX)
 #
 ###################################################################################
