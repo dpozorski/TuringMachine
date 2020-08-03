@@ -12,8 +12,9 @@ as a table or graph structure.
 """
 
 import abc
-from lib.Head import Head
 from lib.State import State
+from lib.controllers.Input import Input
+from lib.controllers.Output import Output
 
 __author__ = "Dylan Pozorski"
 __project__ = "TuringMachine"
@@ -38,16 +39,16 @@ class Controller(abc.ABC):
 		pass
 
 	@abc.abstractmethod
-	def run(self, state: State, tape_head: Head) -> State:
+	def next(self, state: State, input: Input) -> Output:
 		"""
-		Run the controller a single iteration with
-			the the provided tape and head.
+		From the specified input, compute the transition
+		action and the next graph state.
 
 		:param state: State, The current state that
 			the tape head is currently located.
-		:param tape_head: Head, The machine's tape
-			head interface for controlling the TM.
-		:return: State
+		:param input: Input, The current word
+			being read by the print head on the TM.
+		:return: Output
 
 		:raises: NotImplementedError
 
