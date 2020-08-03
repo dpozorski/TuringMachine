@@ -13,7 +13,6 @@ the next target state.
 
 import math
 import copy
-import random
 from lib.Head import Head
 from lib.State import State
 from typing import Set, List, Tuple

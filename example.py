@@ -7,8 +7,8 @@ import os
 # ******************** START - RECOMMENDED STEPS FOR EXECUTION ********************
 ###################################################################################
 #
-# 1) Update the controller_type (table or network)
-# 2) Update the operation_type (addition, multiplication, successor)
+# 1) Update the controller_type (table, binary_table, or network)
+# 2) Update the operation_type (addition, multiplication, or successor)
 # 3) Update the example (example-XXX)
 #
 ###################################################################################
@@ -22,10 +22,10 @@ deserializer = JSONDeserializer()
 controller_type = "table"
 
 # define the operation type
-operation_type = "multiplication"
+operation_type = "addition"
 
 # select the example file to load in
-example = "example-001"
+example = "example-004"
 
 # define config file paths
 root_path = os.path.dirname(os.path.abspath(__file__))
@@ -56,13 +56,13 @@ tm = TuringMachine(controller=controller, tape_head=tape_head)
 
 tm.run()
 
-controller = controller.to_binary()
 # controller.rebase()
+# controller = controller.to_binary()
 
 print(controller)
-
-controller.close_domain()
-
-print(controller)
+#
+# controller.close_domain()
+#
+# print(controller)
 # for entry in entries:
 # 	print(entry, entry.source.root, entry.source.label, entry.target.root, entry.target.label)
