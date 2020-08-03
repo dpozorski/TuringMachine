@@ -130,7 +130,7 @@ class State(object):
 
 		return hash(self.__repr__())
 
-	def to_binary(self, label_size: int) -> BinarySequence:
+	def to_binary(self, label_size: int = -1) -> BinarySequence:
 		"""
 		Convert the state into a binary sequence.
 
@@ -145,6 +145,7 @@ class State(object):
 
 		bs = BinarySequence(values=[])
 		bits = 1 if self.label == 0 else math.ceil(math.log(self.label, 2))
+		label_size = bits if label_size < 1 else label_size
 
 		if label_size < bits:
 			msg = "Overflow Invalid Label Size (bits): {}"

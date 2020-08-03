@@ -13,11 +13,12 @@ the next target state.
 
 import math
 import copy
-from lib.Head import Head
 from lib.State import State
 from typing import Set, List, Tuple
 from lib.controls.Write import Write
 from lib.Controller import Controller
+from lib.controllers.Input import Input
+from lib.controllers.Output import Output
 from lib.controllers.table.Edge import Edge
 from lib.controllers.table.Word import Word
 from lib.controllers.binary_table.Bit import Bit
@@ -145,34 +146,36 @@ class Table(Controller):
 					self.entries.remove(edge)
 					break
 
-	def run(self, state: State, tape_head: Head) -> State:
+	def next(self, state: State, input: Input) -> Output:
 		"""
-		Run the controller a single iteration with
-			the the provided tape and head.
+		From the specified input, compute the transition
+		action and the next graph state.
 
 		:param state: State, The current state that
 			the tape head is currently located.
-		:param tape_head: Head, The machine's tape
-			head interface for controlling the TM.
-		:return: State
+		:param input: Input, The current word
+			being read by the print head on the TM.
+		:return: Output
 
 		"""
 
+		action, match = None, None
+
 		if state is not None:
-			match = None
-			r = tape_head.read()
-
 			for e in self.entries:
-				if e.source == state and r == e.condition:
+				if input.word == e.condition \
+						and e.source == state:
 					match = e.target
-					params = [tape_head.operations, state, match, repr(e.action), tape_head]
-					print("{}. State {}->{}, {}, {}".format(*params))
-					e.action.exec(head=tape_head)
+					action = e.action
 					break
-
-			return match
 		else:
-			return self.initial_state()
+			match = self.initial_state()
+
+		return Output(
+			action=action,
+			state=match,
+			timestep=input.timestep
+		)
 
 	def initial_state(self) -> State:
 		"""

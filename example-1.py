@@ -25,7 +25,7 @@ controller_type = "table"
 operation_type = "addition"
 
 # select the example file to load in
-example = "example-004"
+example = "example-001"
 
 # define config file paths
 root_path = os.path.dirname(os.path.abspath(__file__))
@@ -54,15 +54,5 @@ tape_head = deserializer.deserialize(obj_json=json_string)
 # construct the Turing Machine
 tm = TuringMachine(controller=controller, tape_head=tape_head)
 
+# execute the TM
 tm.run()
-
-# controller.rebase()
-# controller = controller.to_binary()
-
-print(controller)
-#
-# controller.close_domain()
-#
-# print(controller)
-# for entry in entries:
-# 	print(entry, entry.source.root, entry.source.label, entry.target.root, entry.target.label)

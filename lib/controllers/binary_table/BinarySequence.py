@@ -140,7 +140,7 @@ class BinarySequence(object):
 		for i in reversed(range(0, len(self.values))):
 			int_rep += math.pow(2, i) * int(self.values[i].value)
 
-		return int_rep
+		return int(int_rep)
 
 	@property
 	def values(self) -> List[Bit]:
