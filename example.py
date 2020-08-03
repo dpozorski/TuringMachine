@@ -56,10 +56,10 @@ tm = TuringMachine(controller=controller, tape_head=tape_head)
 
 tm.run()
 
-# controller = controller.to_binary()
 # controller.rebase()
+# controller = controller.to_binary()
 
-# print(controller)
+print(controller)
 #
 # controller.close_domain()
 #
