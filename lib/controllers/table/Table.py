@@ -202,8 +202,7 @@ class Table(Controller):
 		Return a list of indefinite state-input pairs.
 		These pairs indicate accessible states within the
 		table, but ones that are not defined across all
-		potential inputs/transitions. Creates and randomly
-		assigns terminal failure nodes to the targets.
+		potential inputs/transitions.
 
 		:return: List[Tuple[State, Word]]
 
