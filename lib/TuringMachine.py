@@ -15,7 +15,6 @@ from lib.Head import Head
 from lib.State import State
 from lib.Controller import Controller
 from lib.controllers.Input import Input
-from lib.controllers.Output import Output
 from lib.controllers.IOPair import IOPair
 from lib.data.log.MachineLog import MachineLog
 
