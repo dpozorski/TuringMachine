@@ -55,3 +55,29 @@ class Controller(abc.ABC):
 		"""
 
 		raise NotImplementedError
+
+	def close_domain(self) -> None:
+		"""
+		Compute the domain's closure and add missing
+		control sequences/edges to the domain. This primarily
+		deals with adding all of the indefinite control
+		sequences to the control set and terminating them
+		with failure nodes.
+
+		:return: None
+
+		"""
+
+		raise NotImplementedError
+
+	def rebase(self) -> None:
+		"""
+		Rebasing the table reassigns the state
+		labels into a contiguous listing of integer
+		labels.
+
+		:return: None
+
+		"""
+
+		raise NotImplementedError

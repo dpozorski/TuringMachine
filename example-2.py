@@ -21,17 +21,38 @@ import os
 deserializer = JSONDeserializer()
 
 # define the controller type
-controller_type = "table"
+controller_type = "binary_table"
 
 # define the operation type
-operation_type = "addition"
+operation_type = "successor"
+
+# operation param 1
+param_1 = 14
+
+# operation param 1
+param_2 = 15
+
+# The label padding to pad the output label with
+label_padding = -1
+
+# The log file name
+log_file = os.path.join("training/data/raw", operation_type)
 
 if operation_type == "addition":
-	tape = TapeGenerator.addition(a=3, b=5)
+	label_padding = 2
+	tape = TapeGenerator.addition(a=param_1, b=param_2)
+	name = str(param_1) + "_plus_" + str(param_2) + ".csv"
+	log_file = os.path.join(log_file, name)
 elif operation_type == "multiplication":
-	tape = TapeGenerator.multiplication(a=1, b=1)
+	label_padding = 0
+	tape = TapeGenerator.multiplication(a=param_1, b=param_2)
+	name = str(param_1) + "_times_" + str(param_2) + ".csv"
+	log_file = os.path.join(log_file, name)
 else:
-	tape = TapeGenerator.succession(a=1)
+	label_padding = 6
+	tape = TapeGenerator.succession(a=param_1)
+	name = "succeed_" + str(param_1) + ".csv"
+	log_file = os.path.join(log_file, name)
 
 # define config file paths
 root_path = os.path.dirname(os.path.abspath(__file__))
@@ -55,5 +76,17 @@ tape_head = Head(tape=tape)
 # construct the Turing Machine
 tm = TuringMachine(controller=controller, tape_head=tape_head)
 
+# Close the controller's undefined input states
+tm.controller.close_domain()
+
+# Rebase the labels
+tm.controller.rebase()
+
 # execute the TM
 tm.run()
+
+# export the execution log
+tm.log.export_csv(
+	filepath=log_file,
+	label_padding=label_padding
+)
